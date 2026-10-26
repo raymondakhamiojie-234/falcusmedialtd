@@ -113,43 +113,43 @@ export default function ServicesPage({ onOpenAuditModal }) {
   };
 
   return (
-    <div className="bg-[#0A0A0A] text-white">
+    <div className="bg-white text-slate-900">
       
       {/* 1. Header Banner */}
-      <section className="relative py-24 sm:py-32 bg-gradient-to-b from-[#10132E] via-[#0A0A0A] to-[#0A0A0A] border-b border-white/10 overflow-hidden">
-        <div className="absolute top-0 right-1/4 w-96 h-96 bg-indigo-600/15 rounded-full blur-3xl pointer-events-none" />
+      <section className="relative py-24 sm:py-32 bg-gradient-to-b from-[#EEF4FF] via-[#F8FAFC] to-white border-b border-slate-100 overflow-hidden">
+        <div className="absolute top-0 right-1/4 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none" />
         
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 text-xs font-bold uppercase tracking-wider mb-5">
+          <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-700 text-xs font-bold uppercase tracking-wider mb-5">
             <Sparkles size={14} />
             <span>FULL-SERVICE AGENCY SOLUTIONS</span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-tight mb-6">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-slate-950 tracking-tight leading-tight mb-6">
             Premium Social Media & <span className="bg-gradient-to-r from-[#6366FF] to-[#A855F7] bg-clip-text text-transparent">Growth Services</span>
           </h1>
 
-          <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
             From strategic account management and performance paid ads to high-urgency strike clearance and WhatsApp automation.
           </p>
         </div>
       </section>
 
       {/* 2. Interactive Instant WhatsApp Service Dispatch (Core Feature) */}
-      <section className="py-20 bg-[#0E1022] border-b border-white/10">
+      <section className="py-20 bg-[#F8FAFC] border-b border-slate-100">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div className="rounded-3xl p-8 sm:p-12 bg-gradient-to-br from-[#161936] to-[#0D0F20] border border-indigo-500/30 shadow-2xl">
+          <div className="rounded-3xl p-8 sm:p-12 bg-white border border-slate-200/90 shadow-xl shadow-slate-200/50">
             
             <div className="text-center max-w-2xl mx-auto mb-8">
-              <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-bold uppercase tracking-wider mb-3 border border-emerald-500/30">
+              <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold uppercase tracking-wider mb-3 border border-emerald-200">
                 <Sparkles size={13} />
                 <span>INSTANT WHATSAPP DISPATCH</span>
               </div>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-white mb-2">
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-950 mb-2">
                 Order a Service or Request Pricing
               </h2>
-              <p className="text-sm text-gray-300">
+              <p className="text-sm text-slate-600">
                 Pick your platform and specific requirement. Our 24/7 WhatsApp desk receives your inquiry with zero account creation required.
               </p>
             </div>
@@ -170,7 +170,7 @@ export default function ServicesPage({ onOpenAuditModal }) {
                     className={`flex items-center space-x-2 px-4 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer ${
                       isSelected
                         ? 'bg-gradient-to-r from-[#6366FF] to-[#7B35FF] text-white shadow-lg shadow-indigo-600/30 scale-105'
-                        : 'bg-white/5 text-gray-300 hover:text-white hover:bg-white/10 border border-white/10'
+                        : 'bg-slate-100 text-slate-700 hover:text-slate-900 hover:bg-slate-200 border border-slate-200'
                     }`}
                   >
                     <Icon size={16} />
@@ -181,18 +181,18 @@ export default function ServicesPage({ onOpenAuditModal }) {
             </div>
 
             {/* Dropdown & Submit */}
-            <div className="max-w-xl mx-auto bg-[#0A0A0A] border border-white/15 rounded-2xl p-6 sm:p-8">
-              <label className="block text-xs font-bold uppercase tracking-wider text-gray-300 mb-2">
+            <div className="max-w-xl mx-auto bg-slate-50 border border-slate-200/80 rounded-2xl p-6 sm:p-8">
+              <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">
                 Select {selectedPlatform} Service
               </label>
 
               <select
                 value={selectedOption}
                 onChange={(e) => setSelectedOption(e.target.value)}
-                className="w-full px-4 py-3.5 rounded-xl bg-[#14172E] border border-white/20 text-white font-medium text-sm focus:outline-none focus:border-indigo-400 mb-6 cursor-pointer"
+                className="w-full px-4 py-3.5 rounded-xl bg-white border border-slate-300 text-slate-900 font-medium text-sm focus:outline-none focus:border-indigo-500 mb-6 cursor-pointer"
               >
                 {PLATFORM_SERVICES[selectedPlatform].options.map((opt, i) => (
-                  <option key={i} value={opt} className="bg-[#121424] text-white">
+                  <option key={i} value={opt} className="bg-white text-slate-900">
                     {opt}
                   </option>
                 ))}
@@ -214,14 +214,14 @@ export default function ServicesPage({ onOpenAuditModal }) {
       </section>
 
       {/* 3. 6 Core Agency Solutions Detailed Cards */}
-      <section className="py-24 bg-[#0A0A0A]">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-3">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-950 mb-3">
               Comprehensive Growth Systems
             </h2>
-            <p className="text-sm sm:text-base text-gray-400">
+            <p className="text-sm sm:text-base text-slate-600">
               We design every campaign to move the needle where it matters: followers, conversions, and unlocked revenue.
             </p>
           </div>
@@ -232,35 +232,35 @@ export default function ServicesPage({ onOpenAuditModal }) {
               return (
                 <div 
                   key={i}
-                  className="p-8 rounded-3xl bg-white/[0.02] border border-white/10 hover:border-indigo-500/40 hover:bg-white/[0.04] transition-all duration-300 flex flex-col justify-between shadow-xl"
+                  className="p-8 rounded-3xl bg-slate-50 border border-slate-200/80 hover:border-indigo-300 hover:bg-white transition-all duration-300 flex flex-col justify-between shadow-sm hover:shadow-md"
                 >
                   <div>
-                    <div className="w-14 h-14 rounded-2xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center mb-6 border border-indigo-500/20">
+                    <div className="w-14 h-14 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-6 border border-indigo-100">
                       <Icon size={26} />
                     </div>
 
-                    <h3 className="text-xl font-bold text-white mb-3 leading-snug">
+                    <h3 className="text-xl font-bold text-slate-950 mb-3 leading-snug">
                       {svc.title}
                     </h3>
 
-                    <p className="text-sm text-gray-400 leading-relaxed mb-6">
+                    <p className="text-sm text-slate-600 leading-relaxed mb-6">
                       {svc.desc}
                     </p>
 
-                    <div className="space-y-2 pt-4 border-t border-white/5">
+                    <div className="space-y-2 pt-4 border-t border-slate-200/60">
                       {svc.features.map((feat, idx) => (
-                        <div key={idx} className="flex items-center space-x-2 text-xs text-gray-300">
-                          <CheckCircle size={13} className="text-emerald-400 flex-shrink-0" />
+                        <div key={idx} className="flex items-center space-x-2 text-xs text-slate-700">
+                          <CheckCircle size={13} className="text-emerald-600 flex-shrink-0" />
                           <span>{feat}</span>
                         </div>
                       ))}
                     </div>
                   </div>
 
-                  <div className="pt-6 mt-6 border-t border-white/10">
+                  <div className="pt-6 mt-6 border-t border-slate-200/60">
                     <button
                       onClick={onOpenAuditModal}
-                      className="inline-flex items-center space-x-1.5 text-xs font-bold text-indigo-400 hover:text-white transition-colors cursor-pointer"
+                      className="inline-flex items-center space-x-1.5 text-xs font-bold text-indigo-600 hover:text-indigo-800 transition-colors cursor-pointer"
                     >
                       <span>Inquire About This Service</span>
                       <ArrowUpRight size={15} />
@@ -275,20 +275,20 @@ export default function ServicesPage({ onOpenAuditModal }) {
       </section>
 
       {/* 4. Our 4-Step Working Process */}
-      <section className="py-20 bg-[#0E1020] border-t border-b border-white/10">
+      <section className="py-20 bg-[#F8FAFC] border-t border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="text-xs font-bold text-indigo-400 uppercase tracking-widest">HOW WE OPERATE</span>
-            <h2 className="text-3xl font-extrabold text-white mt-2">Our Execution Roadmap</h2>
+            <span className="text-xs font-bold text-indigo-600 uppercase tracking-widest">HOW WE OPERATE</span>
+            <h2 className="text-3xl font-extrabold text-slate-950 mt-2">Our Execution Roadmap</h2>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {processSteps.map((item, i) => (
-              <div key={i} className="p-6 rounded-2xl bg-white/[0.02] border border-white/10 relative">
-                <div className="text-3xl font-black text-indigo-400/40 mb-3">{item.step}</div>
-                <h4 className="text-lg font-bold text-white mb-2">{item.title}</h4>
-                <p className="text-xs text-gray-400 leading-relaxed">{item.desc}</p>
+              <div key={i} className="p-6 rounded-2xl bg-white border border-slate-200/80 shadow-sm relative">
+                <div className="text-3xl font-black text-indigo-600/30 mb-3">{item.step}</div>
+                <h4 className="text-lg font-bold text-slate-950 mb-2">{item.title}</h4>
+                <p className="text-xs text-slate-600 leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -297,22 +297,22 @@ export default function ServicesPage({ onOpenAuditModal }) {
       </section>
 
       {/* 5. FAQs */}
-      <section className="py-20 bg-[#0A0A0A]">
+      <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center mb-12">
-            <div className="inline-flex items-center space-x-1.5 text-xs font-bold text-indigo-400 uppercase tracking-wider mb-2">
+            <div className="inline-flex items-center space-x-1.5 text-xs font-bold text-indigo-600 uppercase tracking-wider mb-2">
               <HelpCircle size={14} />
               <span>FREQUENTLY ASKED QUESTIONS</span>
             </div>
-            <h2 className="text-3xl font-extrabold text-white">Got Questions About Our Services?</h2>
+            <h2 className="text-3xl font-extrabold text-slate-950">Got Questions About Our Services?</h2>
           </div>
 
           <div className="space-y-4">
             {faqs.map((f, i) => (
-              <div key={i} className="p-6 rounded-2xl bg-white/[0.02] border border-white/10">
-                <h3 className="text-base font-bold text-white mb-2">{f.q}</h3>
-                <p className="text-xs sm:text-sm text-gray-400 leading-relaxed">{f.a}</p>
+              <div key={i} className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80">
+                <h3 className="text-base font-bold text-slate-950 mb-2">{f.q}</h3>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">{f.a}</p>
               </div>
             ))}
           </div>

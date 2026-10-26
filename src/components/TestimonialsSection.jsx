@@ -4,24 +4,24 @@ import { TESTIMONIALS } from '../data/testimonialsData';
 
 export default function TestimonialsSection() {
   return (
-    <section id="testimonials" className="relative py-24 bg-[#080914] border-t border-b border-white/10 overflow-hidden">
+    <section id="testimonials" className="relative py-24 bg-white border-t border-b border-slate-100 overflow-hidden">
       
       {/* Background glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-indigo-600/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-indigo-500/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-wider mb-4">
+          <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-amber-700 text-xs font-bold uppercase tracking-wider mb-4">
             <Star size={13} fill="currentColor" />
             <span>REAL GROWTH • REAL RESULTS</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-950 tracking-tight mb-4">
             What Creators & Brand Leaders Say
           </h2>
 
-          <p className="text-base sm:text-lg text-gray-400">
+          <p className="text-base sm:text-lg text-slate-600">
             Hear directly from the influencers, media founders, and marketing directors whose accounts and revenues we’ve restored and scaled.
           </p>
         </div>
@@ -31,7 +31,7 @@ export default function TestimonialsSection() {
           {TESTIMONIALS.map((item, index) => (
             <div
               key={index}
-              className="relative p-8 rounded-3xl bg-white/[0.03] border border-white/10 hover:border-indigo-500/40 hover:bg-white/[0.05] transition-all duration-300 flex flex-col justify-between shadow-xl"
+              className="relative p-8 rounded-3xl bg-slate-50 border border-slate-200/80 hover:border-indigo-300 hover:bg-white transition-all duration-300 flex flex-col justify-between shadow-sm hover:shadow-md"
             >
               <div>
                 {/* Star rating & Tag */}
@@ -42,30 +42,30 @@ export default function TestimonialsSection() {
                     ))}
                   </div>
 
-                  <span className="px-3 py-1 rounded-full text-[11px] font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                  <span className="px-3 py-1 rounded-full text-[11px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
                     {item.tag}
                   </span>
                 </div>
 
                 {/* Quote */}
-                <blockquote className="text-base sm:text-lg text-gray-200 font-normal leading-relaxed mb-6 italic">
+                <blockquote className="text-base sm:text-lg text-slate-700 font-normal leading-relaxed mb-6 italic">
                   "{item.quote}"
                 </blockquote>
               </div>
 
               {/* Author Info with Photo Avatar */}
-              <div className="pt-6 border-t border-white/10 flex items-center space-x-4">
+              <div className="pt-6 border-t border-slate-200/80 flex items-center space-x-4">
                 <img
                   src={item.avatar}
                   alt={item.author}
                   className="w-12 h-12 rounded-full object-cover border-2 border-indigo-400/50 shadow-md"
                 />
                 <div>
-                  <div className="text-sm font-bold text-white flex items-center space-x-1.5">
+                  <div className="text-sm font-bold text-slate-950 flex items-center space-x-1.5">
                     <span>{item.author}</span>
-                    <CheckCircle2 size={14} className="text-indigo-400" />
+                    <CheckCircle2 size={14} className="text-indigo-600" />
                   </div>
-                  <div className="text-xs text-gray-400 mt-0.5">
+                  <div className="text-xs text-slate-500 mt-0.5">
                     {item.role}
                   </div>
                 </div>

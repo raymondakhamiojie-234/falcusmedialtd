@@ -21,7 +21,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <div className="min-h-screen bg-[#0A0A0A] text-white flex flex-col selection:bg-[#6366FF] selection:text-white">
+      <div className="min-h-screen bg-white text-gray-900 flex flex-col selection:bg-[#6366FF] selection:text-white">
         
         {/* Sticky Global Navbar */}
         <Navbar onOpenAuditModal={() => setIsAuditModalOpen(true)} />

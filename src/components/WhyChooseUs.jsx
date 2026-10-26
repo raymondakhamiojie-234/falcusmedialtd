@@ -22,7 +22,7 @@ export default function WhyChooseUs({ onOpenAuditModal }) {
   ];
 
   return (
-    <section className="relative py-24 bg-[#080914] border-t border-b border-white/10 overflow-hidden">
+    <section className="relative py-24 bg-white border-t border-b border-slate-100 overflow-hidden">
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
@@ -31,29 +31,29 @@ export default function WhyChooseUs({ onOpenAuditModal }) {
           {/* Left Column: Core Value Propositions */}
           <div className="lg:col-span-7">
             
-            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 text-xs font-bold uppercase tracking-wider mb-4">
-              <Star size={13} className="text-indigo-400" />
+            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-700 text-xs font-bold uppercase tracking-wider mb-4">
+              <Star size={13} className="text-indigo-600" />
               <span>WHY CHOOSE US</span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight mb-8">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-950 tracking-tight leading-tight mb-8">
               Why Top Creators & Businesses Choose{' '}
-              <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
                 Falcus Media Ltd
               </span>
             </h2>
 
             <div className="space-y-6">
               {points.map((pt, i) => (
-                <div key={i} className="flex items-start space-x-4 p-5 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-indigo-500/30 hover:bg-white/[0.04] transition-all duration-200">
-                  <div className="w-8 h-8 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center flex-shrink-0 mt-0.5 border border-emerald-500/30">
+                <div key={i} className="flex items-start space-x-4 p-5 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-indigo-300 hover:bg-white shadow-sm transition-all duration-200">
+                  <div className="w-8 h-8 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center flex-shrink-0 mt-0.5 border border-emerald-200">
                     <Check size={18} className="stroke-[3]" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-white mb-1">
+                    <h3 className="text-lg font-bold text-slate-900 mb-1">
                       {pt.title}
                     </h3>
-                    <p className="text-sm text-gray-400 leading-relaxed">
+                    <p className="text-sm text-slate-600 leading-relaxed">
                       {pt.desc}
                     </p>
                   </div>

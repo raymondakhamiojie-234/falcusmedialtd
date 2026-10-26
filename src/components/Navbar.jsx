@@ -22,7 +22,7 @@ export default function Navbar({ onOpenAuditModal }) {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-[#0A0A0A]/90 backdrop-blur-md border-b border-white/10 transition-all duration-200">
+    <header className="sticky top-0 z-50 w-full bg-white/90 backdrop-blur-md border-b border-gray-100 shadow-sm transition-all duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           
@@ -31,7 +31,7 @@ export default function Navbar({ onOpenAuditModal }) {
             to="/" 
             className="flex items-center space-x-3 group text-left focus:outline-none"
           >
-            <div className="w-10 h-10 rounded-xl bg-[#0F1126] border border-indigo-500/30 p-1 flex items-center justify-center shadow-lg shadow-indigo-500/20 group-hover:border-indigo-400 group-hover:scale-105 transition-all duration-300">
+            <div className="w-10 h-10 rounded-xl bg-white border border-gray-200 p-1 flex items-center justify-center shadow-sm group-hover:border-[#6366FF] group-hover:scale-105 transition-all duration-300">
               <img 
                 src="/logo.webp" 
                 alt="Falcus Media Ltd Logo" 
@@ -40,19 +40,19 @@ export default function Navbar({ onOpenAuditModal }) {
             </div>
             <div>
               <div className="flex items-center space-x-1.5">
-                <span className="font-bold text-xl tracking-tight text-white group-hover:text-indigo-400 transition-colors">
+                <span className="font-bold text-xl tracking-tight text-gray-900 group-hover:text-[#6366FF] transition-colors">
                   FALCUS<span className="text-[#6366FF]">MEDIA</span>
                 </span>
-                <span className="px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider bg-indigo-500/10 text-indigo-400 border border-indigo-500/30 rounded">
+                <span className="px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider bg-indigo-50 text-[#6366FF] border border-indigo-200 rounded">
                   LTD
                 </span>
               </div>
-              <p className="text-[11px] text-gray-400 font-medium tracking-wide">Digital & Influencer Agency</p>
+              <p className="text-[11px] text-gray-500 font-medium tracking-wide">Digital & Influencer Agency</p>
             </div>
           </Link>
 
           {/* Desktop Navigation Links (Direct Page Routing) */}
-          <nav className="hidden lg:flex items-center space-x-1 bg-white/[0.03] p-1.5 rounded-full border border-white/10">
+          <nav className="hidden lg:flex items-center space-x-1 bg-gray-50 p-1.5 rounded-full border border-gray-200">
             {navLinks.map((link) => {
               const isActive = location.pathname === link.path;
               return (
@@ -62,7 +62,7 @@ export default function Navbar({ onOpenAuditModal }) {
                   className={`px-4 py-2 text-sm font-medium rounded-full transition-all duration-200 ${
                     isActive
                       ? 'bg-gradient-to-r from-[#6366FF] to-[#7B35FF] text-white shadow-md shadow-indigo-500/25'
-                      : 'text-gray-300 hover:text-white hover:bg-white/5'
+                      : 'text-gray-600 hover:text-gray-900 hover:bg-white'
                   }`}
                 >
                   {link.label}
@@ -75,10 +75,10 @@ export default function Navbar({ onOpenAuditModal }) {
           <div className="hidden sm:flex items-center space-x-3">
             <button
               onClick={handleWhatsApp}
-              className="inline-flex items-center space-x-2 px-3.5 py-2.5 rounded-full text-xs font-semibold text-emerald-400 bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/30 transition-all duration-200 cursor-pointer"
+              className="inline-flex items-center space-x-2 px-3.5 py-2.5 rounded-full text-xs font-semibold text-emerald-700 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 transition-all duration-200 cursor-pointer"
               title="Chat on WhatsApp"
             >
-              <MessageCircle size={15} className="text-emerald-400" />
+              <MessageCircle size={15} className="text-emerald-600" />
               <span>WhatsApp</span>
             </button>
 
@@ -95,14 +95,14 @@ export default function Navbar({ onOpenAuditModal }) {
           <div className="lg:hidden flex items-center space-x-2">
             <button
               onClick={handleWhatsApp}
-              className="p-2 rounded-lg bg-emerald-500/10 text-emerald-400 border border-emerald-500/20"
+              className="p-2 rounded-lg bg-emerald-50 text-emerald-600 border border-emerald-200"
               aria-label="WhatsApp"
             >
               <MessageCircle size={18} />
             </button>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2.5 rounded-xl bg-white/5 border border-white/10 text-gray-300 hover:text-white focus:outline-none cursor-pointer"
+              className="p-2.5 rounded-xl bg-gray-50 border border-gray-200 text-gray-700 hover:text-gray-900 focus:outline-none cursor-pointer"
               aria-label="Toggle menu"
             >
               {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
@@ -114,7 +114,7 @@ export default function Navbar({ onOpenAuditModal }) {
 
       {/* Mobile Slide-down Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-[#0F0F14] border-b border-white/10 px-6 py-6 space-y-4 animate-in slide-in-from-top-4 duration-200">
+        <div className="lg:hidden bg-white border-b border-gray-200 px-6 py-6 space-y-4 shadow-xl animate-in slide-in-from-top-4 duration-200">
           <nav className="flex flex-col space-y-2">
             {navLinks.map((link) => {
               const isActive = location.pathname === link.path;
@@ -126,7 +126,7 @@ export default function Navbar({ onOpenAuditModal }) {
                   className={`px-4 py-3 rounded-xl text-base font-medium transition-colors ${
                     isActive
                       ? 'bg-gradient-to-r from-[#6366FF] to-[#7B35FF] text-white font-semibold'
-                      : 'text-gray-300 hover:bg-white/5'
+                      : 'text-gray-700 hover:bg-gray-50'
                   }`}
                 >
                   {link.label}
@@ -135,7 +135,7 @@ export default function Navbar({ onOpenAuditModal }) {
             })}
           </nav>
           
-          <div className="pt-4 border-t border-white/10 flex flex-col space-y-3">
+          <div className="pt-4 border-t border-gray-100 flex flex-col space-y-3">
             <button
               onClick={() => {
                 setMobileMenuOpen(false);
@@ -153,7 +153,7 @@ export default function Navbar({ onOpenAuditModal }) {
                 setMobileMenuOpen(false);
                 handleWhatsApp();
               }}
-              className="w-full flex items-center justify-center space-x-2 px-5 py-3 rounded-xl font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 cursor-pointer"
+              className="w-full flex items-center justify-center space-x-2 px-5 py-3 rounded-xl font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 cursor-pointer"
             >
               <MessageCircle size={18} />
               <span>Chat on WhatsApp (+234 903 525 0086)</span>
