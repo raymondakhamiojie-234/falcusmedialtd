@@ -58,10 +58,12 @@ export default function Footer({ onOpenAuditModal }) {
           {/* Brand Info */}
           <div className="lg:col-span-4 space-y-5">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#6366FF] to-[#8B5CF6] p-0.5 shadow-lg shadow-indigo-500/20">
-                <div className="w-full h-full bg-[#0A0A0A] rounded-[10px] flex items-center justify-center">
-                  <span className="font-bold text-lg bg-gradient-to-r from-[#6366FF] to-[#A78BFA] bg-clip-text text-transparent">F</span>
-                </div>
+              <div className="w-10 h-10 rounded-xl bg-[#0F1126] border border-indigo-500/30 p-1 flex items-center justify-center shadow-lg shadow-indigo-500/20">
+                <img 
+                  src="/logo.webp" 
+                  alt="Falcus Media Ltd Logo" 
+                  className="w-full h-full object-contain"
+                />
               </div>
               <span className="font-bold text-2xl tracking-tight text-white">
                 FALCUS<span className="text-[#6366FF]">MEDIA</span>
